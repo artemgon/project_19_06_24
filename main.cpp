@@ -3,15 +3,16 @@
 int main()
 {
 	string s;
+	char symbol;
+	int counter = 0;
 	cout << "Please, enter a string:" << endl;
 	getline(cin, s);
-	for (int i = 0; i < s.length(); i++)
-	{
-		if (s[i] == '.')
-		{
-			s[i] = '!';
-		}
+	cout << "Please, enter a symbol:" << endl;
+	cin >> symbol;
+	for (char& c : s) {
+		if (c == symbol)
+			counter++;
 	}
-	cout << s << endl;
+	cout << "Symbol " << symbol << " appears " << counter << " times in your sentence." << endl;
 	return 0;
 }
