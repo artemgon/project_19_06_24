@@ -7,5 +7,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <cstdarg>
+#include <sstream>
 
 using namespace std;
