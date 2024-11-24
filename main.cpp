@@ -3,21 +3,16 @@
 int main()
 {
 	string s;
-	int n;
+	char symbol;
 	cout << "Please, enter a string" << endl;
 	getline(cin, s);
-	cout << "Enter ASCII number for symbol(34-255):" << endl;
-	do
+	cout << "Please, enter a symbol:" << endl;
+	cin >> symbol;
+	size_t i = s.find(symbol);
+	while (i != string::npos)
 	{
-		cin >> n;
-		cout << endl;
-	} while (n > 255 || n < 34);
-	char symbol = char(n);
-	for (int i = 0; i < s.size(); i++) {
-		if (s[i] == symbol) {
-			s.erase(i, 1);
-			i--; 
-		}
+		s.erase(i, 1);
+		i = s.find(symbol);
 	}
 	cout << "The result is " << s << endl;
 	return 0;
