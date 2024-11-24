@@ -2,19 +2,16 @@
 
 int main()
 {
-	string s, symbol;
-	int pos;
+	string s;
 	cout << "Please, enter a string:" << endl;
 	getline(cin, s);
-	cout << "Please, enter a symbol:" << endl;
-	getline(cin, symbol);
-	cout << "Please, enter a position:" << endl;
-	while (true) {
-		cin >> pos;
-		if (pos >= 0 && pos <= s.size())
-			break;
+	for (int i = 0; i < s.length(); i++)
+	{
+		if (s[i] == '.')
+		{
+			s[i] = '!';
+		}
 	}
-	s.insert(pos, symbol);
-	cout << "The result is " << s << endl;
+	cout << s << endl;
 	return 0;
 }
