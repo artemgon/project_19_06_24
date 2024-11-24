@@ -9,7 +9,7 @@ int main()
 	for (char& c : s) {
 		if (int(c) < 58 && int(c) > 47)
 			i_counter++;
-		else if ((int(c) >= 65 && int(c) <= 90) || (int(c) >= 97 && int(c) <= 122))
+		else if ((int(c) > 64 && int(c) < 91) || (int(c) > 96 && int(c) < 123))
 			c_counter++;
 		else
 			o_counter++;
